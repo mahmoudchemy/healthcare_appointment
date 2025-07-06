@@ -14,6 +14,7 @@ import { UserFormValidation } from "@/lib/validation";
 import { useRouter } from "next/navigation";
 import { createUser } from "@/lib/actions/patient.actions";
 
+
 export enum FormFieldType {
   INPUT = 'input',
   TEXTAREA ='textarea',
@@ -36,7 +37,7 @@ const PatientForm = () => {
       phone:'',
     },
 })
- 
+
   
   async function onSubmit({name,email,phone}: z.infer<typeof UserFormValidation>) {
     setIsLoading(true);
@@ -100,5 +101,6 @@ const PatientForm = () => {
     </Form>
   )
 }
+
 
 export default PatientForm
